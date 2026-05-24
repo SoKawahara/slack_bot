@@ -1,0 +1,17 @@
+{
+  "name": "slack-daily-report",
+  "version": "1.0.0",
+  "description": "平日に毎日自動でSlackにレポートを送るアプリ",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "build": "node -c src/index.js && node -c src/scheduler.js && node -c src/slack.js && echo 'Build OK'"
+  },
+  "dependencies": {
+    "@slack/web-api": "^7.9.1",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "node-cron": "^3.0.3"
+  }
+}
